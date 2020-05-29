@@ -1,0 +1,192 @@
+//3-1 quiz
+
+#include <stdio.h>
+
+int main(void)
+{
+	int kor, eng, mat;
+	int tot;
+	
+	kor = 70;
+	eng = 80;
+	mat = 90;
+	tot = kor + eng + mat;
+	printf("국어:%d, 영어:%d, 수학:%d\n", kor, eng, mat);
+	printf("총 점 : %d\n", tot);
+
+	return 0;
+
+}
+
+//3-2
+#include <stdio.h>
+
+int main(void)
+{
+	char ch;
+
+	printf("문자 입력 : ");
+	scanf_s("%c", &ch);
+	printf("%c의 아스키 코드 값은 %d입니다.", ch, ch); // 문자를 %d로 나타내면 아스키값 보여쥼
+
+	return 0;
+
+}
+
+//4-1-1
+#include <stdio.h>
+
+int main(void)
+{
+	double a = 4.0;
+	double b = 1.2;
+
+	printf("%.1lf + %.1lf = %.1lf\n",a,b,a+b);
+	printf("%.1lf - %.1lf = %.1lf\n", a, b, a - b);
+	printf("%.1lf X %.1lf = %.1lf\n", a, b, a * b);
+	printf("%.1lf / %.1lf = %.1lf\n", a, b, a / b);
+
+	return 0;
+}
+
+//4-1-2
+
+#include <stdio.h>
+
+int main(void)
+{
+	int kor = 3, eng = 5, mat = 4;
+	int credits, res; 
+	double kscore = 3.8, escore = 4.4, mscore = 3.9;
+	double grade;
+
+	credits = kor + eng + mat;
+	grade = (kscore + escore + mscore) / 3;
+
+	res = (credits >= 10) && (grade >= 4.0);
+
+	printf("%d\n", res);
+	
+	/*if (credits >= 10 && grade >= 4.0)
+	{
+		printf("1\n");
+	}
+	else
+		printf("0\n");
+		
+	res 를 이용해서 참거짓 판별할 수 있으므로 굳이 if문 쓰지 않아도 됨*/ 
+
+	return 0;
+
+}
+
+//4-2-1
+
+#include <stdio.h>
+
+int main(void)
+{
+	int res;
+
+	res = (sizeof(short) > sizeof(long));
+	
+	printf("%s\n", (res == 1) ? "short" : "long");
+
+	return 0;
+}
+
+//4-2-2
+
+#include <stdio.h>
+
+int main(void)
+{
+	int seat = 70, att = 65;
+	double rate;
+
+	rate = ((double)att/(double)seat)*100;
+	printf("입장률은 %.1lf%%입니다.\n", rate); //&는 연산자라서 %%사용해줘야 문자로 인식
+	return 0;
+}
+
+#include <stdio.h>
+
+//4-2-3
+
+int main(void)
+{
+
+	int hour, min, sec;
+	double time = 3.76;
+
+	
+	hour = (int)time;
+	
+	/*
+	min = (int)(0.76 * 60);
+
+	sec = (int)(0.6 * 60); //계산해 봐야만 나오는 식
+	*/
+
+	time -= hour;
+
+	time *= 60;
+
+	min = (int)time;
+
+	time -= min;
+
+	time *= 60;
+
+	sec = (int)time;
+
+	printf("3.76시간은 %d시간 %d분 %d초 입니다.", hour, min, sec);
+
+	return 0;
+}
+
+//5-2
+
+#include <stdio.h>
+
+int main(void)
+{
+
+	int age = 25, chest = 95;
+	char size;
+
+	if (age < 20)
+	{
+		if (chest < 85)
+		{
+			size = 'S';
+		}
+		else if (85 <= chest < 95)
+		{
+			size = 'M';
+		}
+		else
+			size = 'L';
+		
+	}
+	
+	if (age >= 20)
+	{
+		if (chest < 90)
+		{
+			size = 'S';
+		}
+		else if (90 <= chest < 100)
+		{
+			size = 'M';
+		}
+		else //(100 =<chest)	를 넣으면 M에서 L로 사이즈가 변경됨....
+			size = 'L';
+		
+	}
+
+	printf("사이즈는 %c입니다. \n", size);
+
+	return 0;
+
+}
