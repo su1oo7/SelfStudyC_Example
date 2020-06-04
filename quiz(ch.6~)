@@ -27,6 +27,9 @@
 		printf("$");
 	}
 	printf("\n");*/
+	
+	
+	
 
 
 //6-2
@@ -114,4 +117,26 @@ double centi_to_meter(int centi)
 	meter = centi/100.0;		//double = int/double 형으로 해줘야하나 100으로 하면 .이하 자리 버려짐 분자가 int인건 왜 되지
 
 	return meter;
+}
+
+
+//7-7 예제 재귀함수 리턴 디버깅 참고차
+
+#include <stdio.h>
+
+void fruit(int cnt);
+
+int main()
+{
+	fruit(1);
+
+	return 0;
+}
+
+void fruit(int cnt)
+{
+	printf("apple\n");
+	if (cnt == 3) return;
+	fruit(cnt + 1);		//함수안에 함수안에 함수로 호출 되다 return fruit 호출 위치로 왔던 것.
+	//printf("jam\n");	//이거 활성화시켜서 커맨드 확인해보면 과정이 좀 잘 이해됨
 }
