@@ -140,3 +140,83 @@ void fruit(int cnt)
 	fruit(cnt + 1);		//함수안에 함수안에 함수로 호출 되다 return fruit 호출 위치로 왔던 것.
 	//printf("jam\n");	//이거 활성화시켜서 커맨드 확인해보면 과정이 좀 잘 이해됨
 }
+
+//7-2
+
+#include <stdio.h>
+
+void sum(int num);
+
+int main()
+{
+	sum(10);
+	sum(100);
+
+	return 0;
+}
+
+void sum(int num)
+{
+	int cnt, total;
+	cnt = 1;
+	total = 0;
+
+	while (cnt<=num)
+	{
+		total += cnt;
+		cnt++;
+	}
+
+	printf("1부터 %d까지의 합은 %d입니다.\n",num,total);
+}
+
+
+/*void sum(int num)	답안지
+{
+	int cnt, total;
+	total = 0;
+	for (cnt = 1; cnt <= num; cnt++)
+	{
+		total += cnt;
+	}
+
+	printf("1부터 %d까지의 합은 %d입니다.\n", num, total);
+
+}*/
+
+/*void sum(int num)
+{
+	int cnt, total;
+	cnt = 1;
+	total = 1;
+
+	while (cnt == num)	//같을 때 까지라는 조건은 실행이 안됨? >>>> 같을때까지가지 아니라 같으면 이라는 조건문 처럼되서 아예 실행 노노
+	{
+		total = total + 1;	//수식 잘못됨 이거 되봤자 1씩증가해서 10, 100 출력
+		cnt++;
+	}
+
+	printf("1부터 %d까지의 합은 %d입니다.\n",num,total);
+}*/
+
+//7-2도전
+
+#include <stdio.h>
+
+int rec_func(int n);
+
+int main()
+{
+	int n,res;
+	printf("값을 입력하세요.");
+	scanf_s("%d", &n, sizeof(n));
+	res=rec_func(n);
+	printf("%d", res);
+	return 0;
+}
+
+int rec_func(int n)
+{
+	if (n==1) return 1;				
+	else return (n+rec_func(n - 1));		//sum 인수 사용해서 더할라했는데 초기화해야하고 재귀함수 돌아갈때마다 sum=0초기화 되서 광역으로 넘기지 않는한 안됨..
+}
