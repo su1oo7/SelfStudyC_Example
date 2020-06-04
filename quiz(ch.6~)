@@ -1,3 +1,34 @@
+//6-1
+	/*int a;
+
+	scanf_s("%d", &a,sizeof(a));
+
+	while (a < 0)
+	{
+		scanf_s("%d", &a, sizeof(a));
+	}*/
+
+	/*int a;
+
+	do
+	{
+		scanf_s("%d", &a, sizeof(a));
+	} while (a < 0);*/
+
+	/*int i;
+	for (i = 0; i < 5; i++)
+	{
+		printf("Be happy\n");
+	}*/
+
+	/*int i;
+	for (i = 0; i < 10; i++)
+	{
+		printf("$");
+	}
+	printf("\n");*/
+
+
 //6-2
 
 #include <stdio.h>
@@ -21,4 +52,66 @@ int main(void)
 
 
 	return 0;
+}
+
+//도전 실제 예제 : 체감 핵 어려움 
+#include <stdio.h>
+
+int main(void)
+{
+	int i,j,pn; 	//pn은 소수 판별 (소수면 1 소수아니면 0; 본인이 판별하여 무언가 기준잡기위한 지수)
+	int n,a ;
+	a = 0;
+
+	printf("2 이상의 정수를 입력하세요: \n");
+	scanf_s("%d", &n, sizeof(n));
+	
+	for (i = 2; i <= n; i++)
+	{
+		pn = 1;	// 무언가 판별용 지수를 넣는 방법을 알게 됨
+
+		for (j = 2; j < i; j++)
+		{
+			if (i % j == 0)
+			{
+				pn = 0; //여기서 0인것으로 무엇을 활용한 것은 아니지만 pn은 소수를 판별하기 위한 지수임
+				break;
+			}
+		}
+		if (pn == 1) //이렇게 쓰임 1인것은 소수임을 나타낸다고 여기서 약속되어있음
+		{
+			printf("%5d", i);
+			a++;
+			if (a % 5 == 0)
+				printf("\n");
+		}
+			
+
+	} 
+		return 0;
+}
+
+//7-1
+#include <stdio.h>
+
+double centi_to_meter(int centi);
+
+int main(void)
+{
+	double res;
+
+	res = centi_to_meter(187);
+	printf("%.2lfm", res);
+
+	return 0;
+}
+
+double centi_to_meter(int centi)
+{	
+	
+	double meter;
+
+	meter = centi/100.0;		//double = int/double 형으로 해줘야하나 100으로 하면 .이하 자리 버려짐 분자가 int인건 왜 되지
+
+	return meter;
 }
