@@ -1,0 +1,21 @@
+﻿  algorithm.c
+c:\users\user\documents\github\ai_academy\200519 project\2_sj edited\js edited\algorithm.c(207): warning C4101: 'i' :참조되지 않은 지역 변수입니다.
+c:\users\user\documents\github\ai_academy\200519 project\2_sj edited\js edited\algorithm.c(244): warning C4028: 정식 매개 변수 1이(가) 선언과 다릅니다.
+c:\users\user\documents\github\ai_academy\200519 project\2_sj edited\js edited\algorithm.c(251): warning C4477: 'scanf_s' : 서식 문자열 '%s'에 'unsigned int' 형식의 인수가 필요하지만 variadic 인수 2의 형식이 'size_t'입니다.
+  c:\users\user\documents\github\ai_academy\200519 project\2_sj edited\js edited\algorithm.c(251): note: 이 인수는 버퍼 크기로 사용됩니다.
+c:\users\user\documents\github\ai_academy\200519 project\2_sj edited\js edited\algorithm.c(253): warning C4477: 'scanf_s' : 서식 문자열 '%s'에 'unsigned int' 형식의 인수가 필요하지만 variadic 인수 2의 형식이 'size_t'입니다.
+  c:\users\user\documents\github\ai_academy\200519 project\2_sj edited\js edited\algorithm.c(253): note: 이 인수는 버퍼 크기로 사용됩니다.
+c:\users\user\documents\github\ai_academy\200519 project\2_sj edited\js edited\algorithm.c(284): warning C4477: 'scanf_s' : 서식 문자열 '%s'에 'unsigned int' 형식의 인수가 필요하지만 variadic 인수 2의 형식이 'size_t'입니다.
+  c:\users\user\documents\github\ai_academy\200519 project\2_sj edited\js edited\algorithm.c(284): note: 이 인수는 버퍼 크기로 사용됩니다.
+c:\users\user\documents\github\ai_academy\200519 project\2_sj edited\js edited\algorithm.c(308): warning C4477: 'scanf_s' : 서식 문자열 '%s'에 'unsigned int' 형식의 인수가 필요하지만 variadic 인수 2의 형식이 'size_t'입니다.
+  c:\users\user\documents\github\ai_academy\200519 project\2_sj edited\js edited\algorithm.c(308): note: 이 인수는 버퍼 크기로 사용됩니다.
+c:\users\user\documents\github\ai_academy\200519 project\2_sj edited\js edited\algorithm.c(329): warning C4477: 'scanf_s' : 서식 문자열 '%s'에 'unsigned int' 형식의 인수가 필요하지만 variadic 인수 2의 형식이 'size_t'입니다.
+  c:\users\user\documents\github\ai_academy\200519 project\2_sj edited\js edited\algorithm.c(329): note: 이 인수는 버퍼 크기로 사용됩니다.
+c:\users\user\documents\github\ai_academy\200519 project\2_sj edited\js edited\algorithm.c(345): warning C4477: 'scanf_s' : 서식 문자열 '%s'에 'unsigned int' 형식의 인수가 필요하지만 variadic 인수 2의 형식이 'size_t'입니다.
+  c:\users\user\documents\github\ai_academy\200519 project\2_sj edited\js edited\algorithm.c(345): note: 이 인수는 버퍼 크기로 사용됩니다.
+c:\users\user\documents\github\ai_academy\200519 project\2_sj edited\js edited\algorithm.c(362): warning C4101: 'i' :참조되지 않은 지역 변수입니다.
+  main.c
+c:\users\user\documents\github\ai_academy\200519 project\2_sj edited\js edited\main.c(11): warning C4101: 't1' :참조되지 않은 지역 변수입니다.
+c:\users\user\documents\github\ai_academy\200519 project\2_sj edited\js edited\main.c(12): warning C4101: 'i' :참조되지 않은 지역 변수입니다.
+  코드를 생성하고 있습니다...
+  200519.vcxproj -> C:\Users\USER\Documents\GitHub\AI_Academy\200519 project\2_SJ edited\x64\Debug\200519.exe
