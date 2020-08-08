@@ -83,3 +83,31 @@ long int fact(int n) {
 		return (n*fact(n-1));
 	}
 }
+
+//하노이탑
+
+#include <stdio.h>
+void hanoi_tower(int n, char from, char temp, char to);
+
+int main() {
+	
+	int top_num;
+	printf("하노이 탑 몇 층 ?");
+	scanf_s("%d", &top_num);
+	hanoi_tower(top_num, 'A', 'B', 'C');
+
+	return 1;
+}
+
+void hanoi_tower(int n, char from, char temp, char to) {
+
+	if (n == 1) {
+		printf("원판 1을 %c에서 %c로 옮김\n", from, to);
+	}
+	else
+	{
+		hanoi_tower(n - 1, from, to, temp);
+		printf("원판 %d을 %c에서 %c로 옮김\n",n, from, to);
+		hanoi_tower(n - 1, temp,from, to);
+	}
+}
