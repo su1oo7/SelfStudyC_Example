@@ -73,3 +73,13 @@ long int fact(int n) {
 		return f;
 	}
 }
+//재귀함수를 이용한 경우에 굉장히 간단해짐
+
+long int fact(int n) {
+
+	if (n <=1)
+		return 1;
+	else{
+		return (n*fact(n-1));
+	}
+}
