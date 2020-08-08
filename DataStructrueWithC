@@ -49,3 +49,27 @@ void main() {
 
 	getchar();
 }
+
+#include <stdio.h>
+long int fact(int);
+
+int main() {
+	
+	fact(4);
+	printf("%d", fact(3));
+
+	return 1;
+}
+
+long int fact(int n) {
+	int i,f = 1;
+
+	if (n <=1)
+		return 1;
+	else{
+		for (i = n; i > 1; i--) {	//책에는 for(i=n;i>=0;i++) 조건이었는데 오류남
+			f = f * i;
+		}
+		return f;
+	}
+}
